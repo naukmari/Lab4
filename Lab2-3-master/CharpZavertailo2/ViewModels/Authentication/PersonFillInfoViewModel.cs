@@ -543,6 +543,7 @@ namespace CharpZavertailo2.ViewModels.Authentication
             {
                 await Task.Run(() =>
                 {
+                    LoaderManager.Instance.ShowLoader();
                     person = new Person(_name, _surname, _email, _date);
                     
                 }
