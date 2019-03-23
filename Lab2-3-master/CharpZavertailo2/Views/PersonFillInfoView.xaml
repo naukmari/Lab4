@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="CharpZavertailo2.Views.PersonFillInfoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CharpZavertailo2.Views"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Height="450" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"></ColumnDefinition>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+    <ScrollViewer>
+
+
+
+        <StackPanel Margin="5">
+            <Label FontSize="10" Foreground="Black" FontStyle="Italic" FontWeight="Bold" Content="Choose your date of birth, please: "></Label>
+            <DatePicker SelectedDate="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  ></DatePicker>
+            <Label FontSize="10" Foreground="Black" FontStyle="Italic" FontWeight="Bold" Content="Name: "></Label>
+            <TextBox   Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Label FontSize="10" Foreground="Black" FontStyle="Italic" FontWeight="Bold" Content="Surname: "></Label>
+            <TextBox  Text="{Binding Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Label  FontSize="10" Foreground="Black" FontStyle="Italic" FontWeight="Bold" Content="Email: "></Label>
+            <TextBox  Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Button Content="Add User" Height="30" Margin="0 5 0 0" Command="{Binding AddUserCommand}"/>
+                <Label FontWeight="Bold">Filter by BDay today </Label>
+
+<CheckBox Margin="10 0 10 10" IsChecked="{Binding IsBirthdayFilter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Birthday</CheckBox>
+            <Label FontWeight="Bold">Filter adults</Label>
+
+<CheckBox Margin="10 0 10 10" IsChecked="{Binding IsAdultFilter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >Adult</CheckBox>
+            <Label FontWeight="Bold">Filter by Sun Sign</Label>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsAries, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Aries</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsTaurus, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Taurus</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsGemini, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Gemini</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsCancer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Cancer</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsLeo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Leo</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsVirgo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Virgo</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsLibra, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Libra</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsScorpio, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Scorpio</CheckBox>
+                <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsSagittarius, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Sagittarius</CheckBox>
+                <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsCapricorn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Capricorn</CheckBox>
+                <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsAquarius, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Aquarius</CheckBox>
+                <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsPisces, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Pisces</CheckBox>
+                <Label FontWeight="Bold">Filter by Chinese Sign</Label>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsRat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Rat</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsOx, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Ox</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsTiger, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Tiger</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsRabbit, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Rabbit</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsDragon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Dragon</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsSnake, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Snake</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsHorse, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Horse</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsGoat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Goat</CheckBox>
+                <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsMonkey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Monkey</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsRooster, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Rooster</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsDog, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Dog</CheckBox>
+            <CheckBox Margin="10 0 10 10" IsChecked="{Binding IsPig, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">Pig</CheckBox>
+
+            </StackPanel>
+    </ScrollViewer>
+        <DataGrid Name="UsersDataGrid" ItemsSource="{Binding Users, Mode=TwoWay}" AutoGenerateColumns="False" Grid.Row="0" Grid.Column="1" Margin="1 1 1 0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" IsReadOnly="False" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Surname" IsReadOnly="False" Binding="{Binding Surname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Date of birth" IsReadOnly="False" Binding="{Binding BDateString}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Email" IsReadOnly="False" Binding="{Binding Email}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Age" IsReadOnly="True" Binding="{Binding Years}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Adult?" IsReadOnly="True" Binding="{Binding IsAdult}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Birthday today?" IsReadOnly="True" Binding="{Binding IsBirthday}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Sun Sign" IsReadOnly="True" Binding="{Binding SunSign}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Chinese Sign" IsReadOnly="True" Binding="{Binding ChineseSign}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Delete">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" Content="Delete"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
